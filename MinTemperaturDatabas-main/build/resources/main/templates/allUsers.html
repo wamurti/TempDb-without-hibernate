@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="se" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>AllUserTemps</title>
+</head>
+
+<html>
+<style>
+  table, th, td {
+    border:1px solid black;
+  }
+</style>
+</html>
+<body>
+<h2> <p th:text="'Jonas ' "/></h2>
+<div>
+  <table style = "width:40%">
+    <th>Id</th>
+    <th>Temperatur</th>
+    <th>Datum</th>
+    <th>Tid</th>
+    <tr th:each="t : ${listanJ}">
+      <td th:text="${t.id}"></td>
+      <td th:text="${t.temperature}"></td>
+      <td th:text="${t.date}"></td>
+      <td th:text="${t.time}"></td>
+  </table>
+</div>
+
+<h2> <p th:text="'Frej ' "/></h2>
+<div th:if="${ not#lists.isEmpty(listanF)}">
+    <table style = "width:40%">
+        <th>Id</th>
+        <th>Temperatur</th>
+        <th>Datum</th>
+        <th>Tid</th>
+        <tr th:each="t : ${listanF}">
+            <td th:text="${t.id}"></td>
+            <td th:text="${t.temperature}"></td>
+            <td th:text="${t.date}"></td>
+            <td th:text="${t.time}"></td>
+    </table>
+</div>
+
+<h2> <p th:text="'Björn ' "/></h2>
+<div th:if="${ not#lists.isEmpty(listanB)}">
+    <table style = "width:40%">
+        <th>Id</th>
+        <th>Temperatur</th>
+        <th>Datum</th>
+        <th>Tid</th>
+        <tr th:each="t : ${listanB}">
+            <td th:text="${t.id}"></td>
+            <td th:text="${t.temperature}"></td>
+            <td th:text="${t.date}"></td>
+            <td th:text="${t.time}"></td>
+    </table>
+</div>
+
+<!--
+<h2> <p th:text="'Frejs temperaturdata' "/></h2>
+<div th:if="${ not#lists.isEmpty(listanF)}">
+    <table style = "width:40%">
+        <th>Id</th>
+        <th>Temperatur</th>
+        <th>Datum</th>
+        <th>Tid</th>
+        <tr th:each="f : ${listanF}">
+            <td th:text="${f.id}"></td>
+            <td th:text="${f.temperature}"></td>
+            <td th:text="${f.date}"></td>
+            <td th:text="${f.time}"></td>
+    </table>
+</div>
+-->
+</body>
+</html>
+
+

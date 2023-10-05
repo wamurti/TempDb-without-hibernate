@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Välj Data</title>
+</head>
+<style>
+    input{/* Knapparna */
+        width: 215px;
+        height: 50px;
+        background-color: lightblue;
+        font-family: Garamond, serif;
+        font-size: larger;
+        border-radius: 15px; /* Rundar Knapparna! */
+    }
+    .flex-box{
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flex-child{
+        flex: 1;
+    }
+
+    body{
+        background-color: navajowhite;
+    }
+
+</style>
+<body>
+<h2>Hämta temperatur från färdiga mallar:</h2>
+<div class="flex-box">
+    <div class="flex-child">
+        <form action="getAllByUsername?name=Frej" method="post">
+            <input type="submit" value="Frejs SensorVärden">
+        </form>
+    </div>
+    <div class="flex-child">
+        <form action="getAllByUsername?name=Björn" method="post">
+            <input type="submit" value="Björns SensorVärden">
+        </form>
+    </div>
+
+    <div class="flex-child">
+        <form action="getAllByUsername?name=Jonas" method="post">
+            <input type="submit" value="Jonas SensorVärden">
+        </form>
+    </div>
+
+    <div class="flex-child">
+        <form action="getAllByUsername?name=Alexander" method="post">
+            <input type="submit" value="Alexanders SensorVärden">
+        </form>
+    </div>
+
+</div>
+
+<br>
+<br>
+
+<div>
+
+    <div class="flex-child">
+        <form action="getAllUsers" method="post">
+            <input type="submit" value="Alla SensorVärden">
+        </form>
+    </div>
+
+    <div class="flex-child">
+        <form action="getAllMax" method="post">
+            <input type="submit" value="Högsta Temperaturer">
+        </form>
+    </div>
+    <div class="flex-child">
+        <form action="getAllMin" method="post">
+            <input type="submit" value="Lägsta Temperaturer">
+        </form>
+    </div>
+
+
+</div>
+<br>
+<br>
+<h2>Hämta temperaturer högre än X från förnamn</h2>
+<form action="getTempHigherThanByUsername" method="post">
+    <label for="name"></label>
+    <input type="text" id="name" name="name" value="Björn" style="width:100px;height: 30px;background-color: whitesmoke"><br>
+    <label for="temp"></label>
+    <input type="number" id="temp" name="temp" value="20" style="width:100px;height: 30px;background-color: whitesmoke"><br>
+    <b><input type="submit" value="Hämta"></b>
+
+</form>
+<br>
+<h2>Hämta persons högsta temperaturer</h2>
+<form action="getMaxByUsername" method="post">
+    <label for="name"></label>
+    <input type="text" id="name2" name="name2" value="Björn" style="width:100px;height: 30px;background-color: whitesmoke"><br>
+    <b><input type="submit" value="Hämta"></b>
+
+</form>
+
+</body>
+</html>

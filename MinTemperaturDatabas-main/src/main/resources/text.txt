@@ -1,0 +1,11 @@
+CREATE USER 'bjorn'@'%' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON tempDb.* TO 'bjorn'@'%' WITH GRANT OPTION;
+
+Var tvungen att editera konfig fil på mariadb servern för att få den att
+acceptera anslutningar från vem som helst = % i (bjorn'@'%')
+Kunde ha skrivit t.ex. jonas publika ip istället för % men då skulle han inte komma åt db från skolan eller andra nät.
+
+
+Försökte mig på att få till en fin google chart linegraph men orken tog slut då jag kände att jag inte behärskar att blanda
+javascript syntax med html thymeleaf osv..
