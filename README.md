@@ -15,7 +15,8 @@ hibernate which can be found in my repo.
 ## The Setup
 
 ![setup](/arkitektur.png)
-
+In a real world scenario the java application would have been implemented on a front end server
+but since this was a group assignment we choose to write individual applications on our laptops.
 <p><br></p>
 
 #### model to tables in the database
