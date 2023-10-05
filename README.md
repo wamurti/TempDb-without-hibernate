@@ -51,8 +51,11 @@ public DbModel getMaxTempFromUser(String name) {}
 #### Functions included in ThymeBasicController
 * Show Everyones Data
 * Show individual Data
-* Find/Show top-5 Highest Temperature
-* Find/Show top-5 Lowest Temperature
+* Find/Show Highest Temperature
+* Find/Show Lowest Temperature
+* Find/Show temperatures from <name> higher than <value>
+* Find/Show highest temperature from <name> 
+
 
 
 ## Thanks to the rest of the team: Jonas, Frej and Alexander
