@@ -46,7 +46,7 @@ public DbModel getMaxTempFromUser(String name) {}
 
 ### The frontend will display several buttons representing functions found in ThymeBasicController.java
 
-![frontend](/dashboard.png)
+![frontend](/Dashboard.png)
 
 #### Functions included in ThymeBasicController
 * Show Everyones Data
